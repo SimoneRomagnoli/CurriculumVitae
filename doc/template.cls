@@ -73,7 +73,7 @@
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvgithub}[2]{\renewcommand{\cvgithub}{\href{#1}{#2}}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
-\newcommand{\objective}[1]{\renewcommand{\objective}{#1}}
+\newcommand{\profile}[1]{\renewcommand{\profile}{#1}}
 \newcommand{\hobby}[1]{\renewcommand{\hobby}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
@@ -152,23 +152,11 @@
 		{\Large\color{black!80}\cvjobtitle}
 
 		%------------------------------------------------
-
-		\renewcommand{\arraystretch}{1.6}
-		\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large\icon{\Mundus}} & \cvsite\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}\\}
-			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\icon{\faGithub}} & \cvgithub\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large\icon{\Letter}} & \cvaddress\\}
-		\end{tabular}
-
-		%------------------------------------------------
 		
-		\ifthenelse{\equal{\objective}{}}{}{
-			\profilesection{Obiettivi}
+		\ifthenelse{\equal{\profile}{}}{}{
+			\profilesection{Profilo}
 			\begin{flushleft}
-				\objective
+				\profile
 			\end{flushleft}
 		}
 
@@ -193,6 +181,22 @@
 				\hobby
 			\end{flushleft}
 			
+		%------------------------------------------------
+
+		\profilesection{Contatti}
+		\begin{flushleft}
+			\vspace{-3mm}
+			\renewcommand{\arraystretch}{1.6}
+			\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
+			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large\icon{\Mundus}} & \cvsite\\}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}\\}
+			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\icon{\faGithub}} & \cvgithub\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large\icon{\Letter}} & \cvaddress\\}
+			\end{tabular}
+		\end{flushleft}
+
 		%------------------------------------------------
 			
 	\end{textblock}
