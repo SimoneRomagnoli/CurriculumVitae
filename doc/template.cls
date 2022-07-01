@@ -10,6 +10,7 @@
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage{fontawesome5}
+\RequirePackage{enumitem}
 \RequirePackage{hyperref}
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage{ragged2e}
@@ -178,8 +179,8 @@
 		
 		\profilesection{Hobby}
 		\begin{flushleft}
-				\hobby
-			\end{flushleft}
+			\hobby
+		\end{flushleft}
 			
 		%------------------------------------------------
 
