@@ -73,7 +73,7 @@
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvgithub}[2]{\renewcommand{\cvgithub}{\href{#1}{#2}}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
-\newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
+\newcommand{\objective}[1]{\renewcommand{\objective}{#1}}
 \newcommand{\hobby}[1]{\renewcommand{\hobby}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
@@ -96,8 +96,8 @@
 }
 
 % Command for printing languages progress bars
-\newcommand\lingue[1]{ 
-	\renewcommand{\lingue}{
+\newcommand\languages[1]{
+	\renewcommand{\languages}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
@@ -165,10 +165,10 @@
 
 		%------------------------------------------------
 		
-		\ifthenelse{\equal{\aboutme}{}}{}{
+		\ifthenelse{\equal{\objective}{}}{}{
 			\profilesection{Obiettivi}
 			\begin{flushleft}
-				\aboutme
+				\objective
 			\end{flushleft}
 		}
 
@@ -184,7 +184,7 @@
 		%------------------------------------------------
 
 		\profilesection{Lingue}
-		\lingue
+		\languages
 			
 		%------------------------------------------------
 		
