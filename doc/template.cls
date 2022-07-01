@@ -10,6 +10,7 @@
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage{fontawesome5}
+\RequirePackage{hyperref}
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage{ragged2e}
 \RequirePackage{etoolbox}
@@ -70,6 +71,7 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
+\newcommand{\cvgithub}[2]{\renewcommand{\cvgithub}{\href{#1}{#2}}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\hobby}[1]{\renewcommand{\hobby}{#1}}
@@ -157,7 +159,8 @@
 			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large\icon{\Mundus}} & \cvsite\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
 			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\icon{\faGithub}} & \cvaddress\\}
+			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\icon{\faGithub}} & \cvgithub\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large\icon{\Letter}} & \cvaddress\\}
 		\end{tabular}
 
 		%------------------------------------------------
