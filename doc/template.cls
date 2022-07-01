@@ -212,15 +212,10 @@
 	{%
 		\round{#1}{
 			\ifcase\value{colorCounter}%
-			maingray\or%
 			mainblue\or%
-			maingray\or%
 			mainblue\or%
-			maingray\or%
 			mainblue\or%
-			maingray\or%
 			mainblue\or%
- 			maingray\or%
 			mainblue\else%
 			maingray\fi%
 		}%
@@ -249,13 +244,13 @@
 \setlength{\tabcolsep}{0pt}
 
 % New environment for the long list
-\newenvironment{twenty}{%
+\newenvironment{cvbox}{%
 	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
 	\end{tabular*}
 }
 
-\newcommand{\twentyitem}[4]{%
+\newcommand{\cvboxitem}[4]{%
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#2}%
 		\hfill%
@@ -288,5 +283,3 @@
 %----------------------------------------------------------------------------------------
 
 \RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
-
-\RequirePackage{hyperref}
