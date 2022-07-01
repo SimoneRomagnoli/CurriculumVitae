@@ -38,7 +38,9 @@
 %	 MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\renewcommand{\bfseries}{\color{gray}} % Make \textbf produce coloured text instead
+%\renewcommand{\bfseries}{\color{gray}} % Make \textbf produce coloured text instead
+\newcommand\textbfg[1]{\textcolor{gray}{\textbf{#1}}}
+\newcommand\textg[1]{\textcolor{gray}{#1}}
 
 \pagestyle{empty} % Disable headers and footers
 
@@ -257,7 +259,7 @@
 
 \newcommand{\cvboxitem}[4]{%
 	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#2}%
+		\textg{#2}%
 		\hfill%
 		{\footnotesize#3}\\%
 		#4\vspace{\parsep}%
